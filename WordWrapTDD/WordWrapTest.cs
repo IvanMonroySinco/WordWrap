@@ -54,22 +54,14 @@ public class WordWrapTest
 
 public class WordWrap
 {
+    private const string SaltoDeLinea = "/n";
+
     public string AjustarTexto(string texto, int columnas)
     {
-        if (texto == "Irremediable")
-        {
-            return "Irremedi/nable";
-        }
-        if (texto == "Computadora")
-        {
-            return "Compu/ntadora";
-        }
+        if (texto.Length <= columnas)
+            return texto;
 
-        if (texto == "Perro" && columnas == 3)
-        {
-            return "Per/nro";
-        }
-
-        return texto;
+        return texto.Substring(0, columnas) + SaltoDeLinea + texto.Substring(columnas);
+        
     }
 }
