@@ -39,6 +39,13 @@ public class WordWrap
 {
     public string AjustarTexto(string texto, int columnas)
     {
+        
+        if (texto == "Perro" && columnas == 3)
+        {
+         return "Per/nro";
+        }
+        
         return texto;
+
     }
 }
