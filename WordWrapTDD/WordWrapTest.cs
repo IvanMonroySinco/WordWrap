@@ -29,10 +29,17 @@ public class WordWrapTest
         var resultado = wordWrap.AjustarTexto("Perro", 3);
 
         resultado.Should().Be("Per/nro");
-    } 
+    }
     
-    
-    
+    [Fact]
+    public void Dado_TextoComputadoraYColumnas5_Debe_RetornarTextoConSaltoDeLineaDespuesDe5PrimerosCaracteres()
+    {
+        var wordWrap = new WordWrap();
+
+        var resultado = wordWrap.AjustarTexto("Computadora", 5);
+
+        resultado.Should().Be("Compu/ntadora");
+    }
 }
 
 public class WordWrap
