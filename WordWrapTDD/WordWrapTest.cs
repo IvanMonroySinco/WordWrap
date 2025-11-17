@@ -18,9 +18,8 @@ public class WordWrapTest
 
 public class WordWrap
 {
-    public string AjustarTexto(string pez, int i)
+    public string AjustarTexto(string texto, int columnas)
     {
         return "Pez";
-        throw new NotImplementedException();
     }
 }
