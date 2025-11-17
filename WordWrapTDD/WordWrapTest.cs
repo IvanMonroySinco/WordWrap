@@ -18,6 +18,8 @@ public class WordWrapTest
     [Theory]
     [InlineData("Pez", 5)]
     [InlineData("Perro", 10)]
+    [InlineData("Gato", 6)]
+    [InlineData("Gallina", 8)]
     public void Dado_StringDeNCantidadDeCaracteresYCantidadDeColumnasMayorQueLongitud_Debe_RetornarCadenaCompleta(string texto, int columnas)
     {
         var wordWrap = new WordWrap();
@@ -26,6 +28,8 @@ public class WordWrapTest
 
         resultado.Should().Be(texto); 
     }
+    
+    
 }
 
 public class WordWrap
