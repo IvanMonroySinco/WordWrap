@@ -32,6 +32,6 @@ public class WordWrap
 {
     public string AjustarTexto(string texto, int columnas)
     {
-        return "Pez";
+        return texto;
     }
 }
