@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cb63af48_002D6d40_002D4362_002D83ff_002Da539e5cb59b5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from WordWrapTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;6161D26A-C812-42AE-AD17-9C55ABD66278/f:WordWrapTest.cs&lt;/ProjectFile&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e3628b1f_002De1cd_002D4238_002Dbe6f_002D7921cf3ec3d8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Dado_StringPezYNumeroDeColumnas5_Debe_RetornarCadenaSinCortar" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::6161D26A-C812-42AE-AD17-9C55ABD66278::net9.0::WordWrapTDD.WordWrapTest.Dado_StringPezYNumeroDeColumnas5_Debe_RetornarCadenaSinCortar&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fdf7b897_002Df631_002D42b8_002Da88a_002D581e7431b89b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from WordWrapTest.cs #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;ProjectFile&gt;6161D26A-C812-42AE-AD17-9C55ABD66278/f:WordWrapTest.cs&lt;/ProjectFile&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
