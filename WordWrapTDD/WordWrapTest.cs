@@ -4,23 +4,15 @@ namespace WordWrapTDD;
 
 public class WordWrapTest
 {
-    [Fact]
-    public void Dado_StringPezYNumeroDeColumnas5_Debe_RetornarCadenaSinCortar()
-    {
-        var wordWrap = new WordWrap();
-
-        var resultado = wordWrap.AjustarTexto("Pez", 5);
-
-        resultado.Should().Be("Pez");
-
-    }
-
+    
     [Theory]
     [InlineData("Pez", 5)]
     [InlineData("Perro", 10)]
     [InlineData("Gato", 6)]
     [InlineData("Gallina", 8)]
-    public void Dado_StringDeNCantidadDeCaracteresYCantidadDeColumnasMayorQueLongitud_Debe_RetornarCadenaCompleta(string texto, int columnas)
+    [InlineData("Cadena", 6)]
+    [InlineData("Hipopotamo", 10)]
+    public void Dado_StringDeNCantidadDeCaracteresYCantidadDeColumnasMayorOIgualQueLongitud_Debe_RetornarCadenaCompleta(string texto, int columnas)
     {
         var wordWrap = new WordWrap();
 
@@ -28,6 +20,9 @@ public class WordWrapTest
 
         resultado.Should().Be(texto); 
     }
+    
+    
+    
     
     
 }
