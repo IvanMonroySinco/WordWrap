@@ -28,7 +28,7 @@ public class WordWrapTest
 
         var resultado = wordWrap.AjustarTexto("Perro", 3);
 
-        resultado.Should().Be("Per/nro");
+        resultado.Should().Be("Per\nro");
     }
 
     [Fact]
@@ -38,7 +38,7 @@ public class WordWrapTest
 
         var resultado = wordWrap.AjustarTexto("Computadora", 5);
 
-        resultado.Should().Be("Compu/ntadora");
+        resultado.Should().Be("Compu\ntadora");
     }
 
     [Fact]
@@ -48,13 +48,13 @@ public class WordWrapTest
 
         var resultado = wordWrap.AjustarTexto("Irremediable", 8);
 
-        resultado.Should().Be("Irremedi/nable");
+        resultado.Should().Be("Irremedi\nable");
     }
 }
 
 public class WordWrap
 {
-    private const string SaltoDeLinea = "/n";
+    private const string SaltoDeLinea = "\n";
 
     public string AjustarTexto(string texto, int columnas)
     {
