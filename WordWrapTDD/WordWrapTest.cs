@@ -50,6 +50,16 @@ public class WordWrapTest
 
         resultado.Should().Be("Irremedi\nable");
     }
+
+    [Fact]
+    public void Dado_TextoHolaMundoConEspacioIntermedioYColumnas6_Debe_RetornarSaltoDeLineaEnElEspacio()
+    {
+        var wordWrap = new WordWrap();
+
+        var resultado = wordWrap.AjustarTexto("Hola Mundo", 8);
+
+        resultado.Should().Be("Hola\nMundo");
+    }
 }
 
 public class WordWrap
