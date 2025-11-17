@@ -20,8 +20,16 @@ public class WordWrapTest
 
         resultado.Should().Be(texto); 
     }
-    
-    
+
+    [Fact]
+    public void Dado_TextoPerroYColumnas3_Debe_RetornarTextoConSaltoDeLineaDespuesDe3PrimerosCaracteres()
+    {
+        var wordWrap = new WordWrap();
+
+        var resultado = wordWrap.AjustarTexto("Perro", 3);
+
+        resultado.Should().Be("Per/nro");
+    } 
     
     
     
