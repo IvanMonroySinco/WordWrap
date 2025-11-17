@@ -14,6 +14,18 @@ public class WordWrapTest
         resultado.Should().Be("Pez");
 
     }
+
+    [Theory]
+    [InlineData("Pez", 5)]
+    [InlineData("Perro", 10)]
+    public void Dado_StringDeNCantidadDeCaracteresYCantidadDeColumnasMayorQueLongitud_Debe_RetornarCadenaCompleta(string texto, int columnas)
+    {
+        var wordWrap = new WordWrap();
+
+        var resultado = wordWrap.AjustarTexto(texto, columnas);
+
+        resultado.Should().Be(texto); 
+    }
 }
 
 public class WordWrap
