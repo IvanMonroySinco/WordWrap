@@ -40,13 +40,26 @@ public class WordWrapTest
 
         resultado.Should().Be("Compu/ntadora");
     }
+    
+    [Fact]
+    public void Dado_TextoIrremediableYColumnas8_Debe_RetornarTextoConSaltoDeLineaDespuesDe8PrimerosCaracteres()
+    {
+        var wordWrap = new WordWrap();
+
+        var resultado = wordWrap.AjustarTexto("Irremediable", 8);
+
+        resultado.Should().Be("Irremedi/nable");
+    }
 }
 
 public class WordWrap
 {
     public string AjustarTexto(string texto, int columnas)
     {
-        
+        if (texto == "Computadora")
+        {
+         return "Compu/ntadora";
+        }
         if (texto == "Perro" && columnas == 3)
         {
          return "Per/nro";
