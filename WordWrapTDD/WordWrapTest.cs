@@ -68,10 +68,11 @@ public class WordWrap
 
     public string AjustarTexto(string texto, int columnas)
     {
-        if (texto == "Hola Mundo")
+        if (texto.IndexOf(" ", StringComparison.Ordinal) > 0)
         {
-            return "Hola\nMundo";
+            return texto.Replace(" ", "\n");
         }
+        
         if (texto.Length <= columnas)
             return texto;
 
