@@ -20,6 +20,7 @@ public class WordWrap
 {
     public string AjustarTexto(string pez, int i)
     {
+        return "Pez";
         throw new NotImplementedException();
     }
 }
