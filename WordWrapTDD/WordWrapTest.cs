@@ -80,6 +80,15 @@ public class WordWrapTest
 
         resultado.Should().Be("Buenos\nDias");
     }
+    [Fact]
+    public void Dado_TextoLargoCon4Columnas_Debe_RetornarMultimplesSaltosDeLineaCada4Caracteres()
+    {
+        var wordWrap = new WordWrap();
+
+        var resultado = wordWrap.AjustarTexto("TextoLargoConPocasColumnas", 4);
+
+        resultado.Should().Be("Text\noLar\ngoCo\nnPoc\nasCo\nlumn\nas");
+    }
 }
 
 public class WordWrap
