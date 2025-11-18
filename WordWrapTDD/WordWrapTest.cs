@@ -68,7 +68,7 @@ public class WordWrapTest
 
         var resultado = wordWrap.AjustarTexto("Hola Mundo Desarrolladores", 15);
 
-        resultado.Should().Be("Hola\nMundo\nDesarrolladores");
+        resultado.Should().Be("Hola Mundo\nDesarrolladores");
     }
 
     [Fact]
@@ -78,7 +78,7 @@ public class WordWrapTest
 
         var resultado = wordWrap.AjustarTexto(" Buenos Dias", 15);
 
-        resultado.Should().Be("Buenos\nDias");
+        resultado.Should().Be("Buenos Dias");
     }
     [Fact]
     public void Dado_TextoLargoCon4Columnas_Debe_RetornarMultimplesSaltosDeLineaCada4Caracteres()
@@ -98,13 +98,13 @@ public class WordWrap
     public string AjustarTexto(string texto, int columnas)
     {
         texto = texto.Trim();
-        
-        
-        if (texto.IndexOf(" ", StringComparison.Ordinal) >= 0)
-            return texto.Replace(" ", "\n");
-        
         if (texto.Length <= columnas)
             return texto;
+        
+        var indiceCorte = texto.LastIndexOf(" ", columnas, StringComparison.Ordinal);
+        if (indiceCorte != -1)
+            return texto.Substring(0, indiceCorte) + SaltoDeLinea 
+                                                   + AjustarTexto(texto[indiceCorte..], columnas);
         
         return texto[..columnas] + SaltoDeLinea + AjustarTexto(texto[columnas..], columnas) ;
     }
