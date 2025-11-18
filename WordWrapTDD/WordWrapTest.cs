@@ -70,7 +70,16 @@ public class WordWrapTest
 
         resultado.Should().Be("Hola\nMundo\nDesarrolladores");
     }
-    
+
+    [Fact]
+    public void Dado_TextoConEspacioInicialOFinal_NoDebe_RetornarCadenaEmpezandoConSaltoDeLinea()
+    {
+        var wordWrap = new WordWrap();
+
+        var resultado = wordWrap.AjustarTexto(" Buenos Dias", 15);
+
+        resultado.Should().Be("Buenos\nDias");
+    }
 }
 
 public class WordWrap
