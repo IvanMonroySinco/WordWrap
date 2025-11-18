@@ -60,6 +60,17 @@ public class WordWrapTest
 
         resultado.Should().Be("Hola\nMundo");
     }
+    
+    [Fact]
+    public void Dado_TextoHolaMundoDesarrolladoresConEspaciosIntermediosYColumnas15_Debe_RetornarSaltoDeLineaEnElEspacio()
+    {
+        var wordWrap = new WordWrap();
+
+        var resultado = wordWrap.AjustarTexto("Hola Mundo Desarrolladores", 15);
+
+        resultado.Should().Be("Hola\nMundo\nDesarrolladores");
+    }
+    
 }
 
 public class WordWrap
@@ -73,7 +84,7 @@ public class WordWrap
         
         if (texto.Length <= columnas)
             return texto;
-
+        
         return texto.Substring(0, columnas) + SaltoDeLinea + texto.Substring(columnas);
         
     }
