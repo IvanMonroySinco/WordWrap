@@ -32,13 +32,13 @@ public class WordWrapTest
     }
 
     [Fact]
-    public void Dado_TextoComputadoraYColumnas5_Debe_RetornarTextoConSaltoDeLineaDespuesDe5PrimerosCaracteres()
+    public void Dado_TextoComputadorYColumnas5_Debe_RetornarTextoConSaltoDeLineaDespuesDe5PrimerosCaracteres()
     {
         var wordWrap = new WordWrap();
 
-        var resultado = wordWrap.AjustarTexto("Computadora", 5);
+        var resultado = wordWrap.AjustarTexto("Computador", 5);
 
-        resultado.Should().Be("Compu\ntadora");
+        resultado.Should().Be("Compu\ntador");
     }
 
     [Fact]
@@ -104,7 +104,6 @@ public class WordWrap
         if (texto.Length <= columnas)
             return texto;
         
-        return texto.Substring(0, columnas) + SaltoDeLinea + texto.Substring(columnas);
-        
+        return texto[..columnas] + SaltoDeLinea + AjustarTexto(texto[columnas..], columnas) ;
     }
 }
