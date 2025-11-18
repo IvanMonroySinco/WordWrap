@@ -8,5 +8,8 @@
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fdf7b897_002Df631_002D42b8_002Da88a_002D581e7431b89b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from WordWrapTest.cs #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;ProjectFile&gt;6161D26A-C812-42AE-AD17-9C55ABD66278/f:WordWrapTest.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;6161D26A-C812-42AE-AD17-9C55ABD66278/f:WordWrapTest.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;6161D26A-C812-42AE-AD17-9C55ABD66278/f:AdicionalesTest.cs&lt;/ProjectFile&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
